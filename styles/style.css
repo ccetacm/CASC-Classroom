@@ -1,0 +1,13 @@
+#statusDot {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  transition: background-color 0.3s ease;
+}
+#statusDot.connected {
+  background-color: green;
+}
