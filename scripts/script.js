@@ -5,6 +5,9 @@ import { database } from "../firebase/firebase-config.js";
 import { onValue, ref } from "firebase/database";
 import { ref as storageRef, uploadBytesResumable, getDownloadURL} from "https://www.gstatic.com/firebasejs/10.14.0/firebase-storage.js";
 
+// this is a new change
+// this is also a new change
+
 // Function to check Firebase connectivity
 function checkFirebaseConnection() {
   const connectedRef = ref(database, ".info/connected");
