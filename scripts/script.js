@@ -1,8 +1,8 @@
 import { auth } from "../firebase/firebase-config.js";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { storage } from "../firebase/firebase-config.js";
 import { database } from "../firebase/firebase-config.js";
-import { ref, onValue} from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
+import { onValue, ref } from "firebase/database";
 import { ref as storageRef, uploadBytesResumable, getDownloadURL} from "https://www.gstatic.com/firebasejs/10.14.0/firebase-storage.js";
 
 // Function to check Firebase connectivity

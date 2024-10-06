@@ -1,0 +1,27 @@
+{
+  "name": "casc-classroom",
+  "version": "1.0.0",
+  "description": "CASC Classroom",
+  "main": "scripts/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityaKrishan651/CASC-Classroom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adityaKrishan651/CASC-Classroom/issues"
+  },
+  "homepage": "https://github.com/adityaKrishan651/CASC-Classroom#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "firebase": "^10.14.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
+  }
+}
