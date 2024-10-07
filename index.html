@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CASC Classroom</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Google Classroom Clone</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!--You can remove the following div and add your own content this only for checking firebase connection-->
-    <div id="statusDot"></div>
-    <script src="scripts/script.js" type="module"></script>
-    Hello
+    <nav>
+        <a href="/" data-link>Dashboard</a>
+        <a href="/profile" data-link>Profile</a>
+        <a href="/auth" data-link>Login</a>
+    </nav>
+
+    <main id="app">
+        <!-- Dynamic content will be injected here -->
+    </main>
+
+    <script type="module" src="assets/js/router.js"></script>
+    <script type="module" src="assets/js/firebase.js"></script> <!-- Firebase initialized here -->
+    <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>
