@@ -11,3 +11,98 @@
 #statusDot.connected {
   background-color: green;
 }
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 10px;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-icon {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.logo img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.title {
+  font-size: 18px;
+  color: #3c4043;
+}
+
+/* Menu list styling */
+.menu-list {
+  list-style: none;
+  padding-top: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #3c4043;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #f1f3f4;
+}
+
+.menu-item.active {
+  background-color: #e8f0fe;
+  border-radius: 0 20px 20px 0;
+}
+
+.icon {
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+/* Submenu styling */
+.submenu {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.menu-heading {
+  font-size: 14px;
+  color: #5f6368;
+  margin-left: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.subtext {
+  font-size: 12px;
+  color: #5f6368;
+  margin-left: 43px;
+}
