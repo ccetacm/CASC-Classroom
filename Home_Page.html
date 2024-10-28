@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CASC Home Page</title>
+    <style>
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      /* Sidebar styling */
+      .sidebar {
+        width: 240px;
+        height: 100vh;
+        background-color: #fff;
+        border-right: 1px solid #e0e0e0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 10px;
+      }
+
+      /* Header styling */
+      .header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .menu-icon {
+        font-size: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .logo img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+
+      .title {
+        font-size: 18px;
+        color: #3c4043;
+      }
+
+      /* Menu list styling */
+      .menu-list {
+        list-style: none;
+        padding-top: 20px;
+      }
+
+      .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #3c4043;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .menu-item:hover {
+        background-color: #f1f3f4;
+      }
+
+      .menu-item.active {
+        background-color: #e8f0fe;
+        border-radius: 0 20px 20px 0;
+      }
+
+      .icon {
+        margin-right: 15px;
+        font-size: 18px;
+      }
+
+      /* Submenu styling */
+      .submenu {
+        border-top: 1px solid #e0e0e0;
+        margin-top: 10px;
+        padding-top: 10px;
+      }
+
+      .menu-heading {
+        font-size: 14px;
+        color: #5f6368;
+        margin-left: 20px;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      .subtext {
+        font-size: 12px;
+        color: #5f6368;
+        margin-left: 43px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar Menu -->
+    <nav class="sidebar">
+      <div class="header">
+        <span class="menu-icon">&#9776;</span>
+        <span class="logo"
+          ><img
+            src="https://img.icons8.com/color/48/000000/google-classroom.png"
+            alt="Classroom Logo"
+        /></span>
+        <span class="title">CASC</span>
+      </div>
+
+      <ul class="menu-list">
+        <li class="menu-item active"><span class="icon">&#8962;</span> Home</li>
+        <li class="menu-item"><span class="icon">&#128197;</span> Calendar</li>
+
+        <div class="submenu">
+          <li class="menu-heading">Enrolled</li>
+          <li class="menu-item"><span class="icon">&#128467;</span> To-do</li>
+          <li class="menu-item">
+            <span class="icon">&#128110;</span> CSE First Semester
+            <p class="subtext">2024 batch</p>
+          </li>
+        </div>
+
+        <li class="menu-item">
+          <span class="icon">&#128229;</span> Archived classes
+        </li>
+        <li class="menu-item"><span class="icon">&#9881;</span> Settings</li>
+      </ul>
+    </nav>
+  </body>
+</html>
