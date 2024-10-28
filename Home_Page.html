@@ -13,6 +13,24 @@
         panel.classList.toggle("active");
         overlay.classList.toggle("active");
       }
+
+      // Function to toggle the About content
+      function toggleAbout() {
+        const aboutContent = document.getElementById("aboutContent");
+        aboutContent.style.display =
+          aboutContent.style.display === "block" ? "none" : "block";
+        // Hide other content sections
+        document.getElementById("changeNameContent").style.display = "none";
+      }
+
+      // Function to toggle the Change Name content
+      function toggleChangeName() {
+        const changeNameContent = document.getElementById("changeNameContent");
+        changeNameContent.style.display =
+          changeNameContent.style.display === "block" ? "none" : "block";
+        // Hide other content sections
+        document.getElementById("aboutContent").style.display = "none";
+      }
     </script>
   </head>
   <body>
@@ -56,10 +74,17 @@
     <!-- Settings Panel -->
     <div id="settingsPanel" class="settings-panel">
       <h2>Settings</h2>
-      <div class="settings-option">Change Name</div>
+      <div class="settings-option" onclick="toggleChangeName()">
+        Change Name
+      </div>
+      <div id="changeNameContent" class="change-content">
+        <p>Enter your new name:</p>
+        <input type="text" placeholder="New Name" />
+      </div>
       <div class="settings-option">Change DP</div>
-      <div class="settings-option">About</div>
-      <div class="about-content">
+      <!-- Keep this text without functionality -->
+      <div class="settings-option" onclick="toggleAbout()">About</div>
+      <div id="aboutContent" class="about-content">
         <p>
           This is the about section where you can provide details about the
           application.

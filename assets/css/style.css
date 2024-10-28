@@ -17,7 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif; /* Default font family */
+  font-family: "Arial", sans-serif;
 }
 
 /* Sidebar styling */
@@ -87,14 +87,6 @@
   font-size: 18px;
 }
 
-/* Enrolled heading styling */
-.menu-heading {
-  font-size: 16px; /* Ensure it matches the other items */
-  color: #3c4043; /* Consistent color */
-  padding: 10px 20px; /* Padding for spacing */
-  font-weight: bold; /* Make it bold */
-}
-
 /* Settings panel styling */
 .settings-panel {
   position: fixed;
@@ -134,11 +126,24 @@
 
 /* About section */
 .about-content {
-  display: block; /* Show the about content by default */
+  display: none; /* Initially hidden */
   margin-top: 10px;
   font-size: 16px;
   color: #333;
   font-family: "Georgia", serif; /* Change font for About section */
+}
+
+/* Change Name content */
+.change-content {
+  display: none; /* Initially hidden */
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  font-family: "Verdana", sans-serif; /* Change font for Change Name section */
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Overlay effect */
