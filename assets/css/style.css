@@ -17,7 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", sans-serif; /* Default font family */
 }
 
 /* Sidebar styling */
@@ -30,6 +30,7 @@
   top: 0;
   left: 0;
   padding-top: 10px;
+  z-index: 1001; /* Ensure sidebar is above the overlay */
 }
 
 /* Header styling */
@@ -86,23 +87,111 @@
   font-size: 18px;
 }
 
-/* Submenu styling */
-.submenu {
-  border-top: 1px solid #e0e0e0;
-  margin-top: 10px;
-  padding-top: 10px;
-}
-
+/* Enrolled heading styling */
 .menu-heading {
-  font-size: 14px;
-  color: #5f6368;
-  margin-left: 20px;
-  margin-bottom: 8px;
-  font-weight: bold;
+  font-size: 16px; /* Ensure it matches the other items */
+  color: #3c4043; /* Consistent color */
+  padding: 10px 20px; /* Padding for spacing */
+  font-weight: bold; /* Make it bold */
 }
 
-.subtext {
-  font-size: 12px;
-  color: #5f6368;
-  margin-left: 43px;
+/* Settings panel styling */
+.settings-panel {
+  position: fixed;
+  top: 0;
+  left: 240px; /* Align with the sidebar */
+  width: calc(100% - 240px); /* Full width minus sidebar */
+  height: 100vh; /* Full height */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Slightly transparent background */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transition */
+  transform: translateX(-100%); /* Hide the panel initially */
+  padding: 20px;
+  overflow-y: auto; /* Enable scrolling if content is long */
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.settings-panel.active {
+  transform: translateX(0); /* Slide in the panel */
+}
+
+.settings-panel h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.settings-option {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0; /* Spacing between options */
+  cursor: pointer;
+}
+
+/* About section */
+.about-content {
+  display: block; /* Show the about content by default */
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  font-family: "Georgia", serif; /* Change font for About section */
+}
+
+/* Overlay effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 240px; /* Align with the sidebar */
+  width: calc(100% - 240px); /* Full width minus sidebar */
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: none; /* Initially hidden */
+  z-index: 900; /* Behind the panel */
+}
+
+.overlay.active {
+  display: block; /* Show overlay when active */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Adjust sidebar width on smaller screens */
+  }
+
+  .settings-panel {
+    left: 200px; /* Adjust position of settings panel */
+    width: calc(100% - 200px); /* Adjust width */
+  }
+
+  .settings-panel h2 {
+    font-size: 20px; /* Smaller header font size */
+  }
+
+  .settings-option {
+    font-size: 18px; /* Smaller option font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px; /* Further adjust sidebar width */
+  }
+
+  .settings-panel {
+    left: 150px; /* Adjust position of settings panel */
+    width: calc(100% - 150px); /* Adjust width */
+  }
+
+  .settings-panel h2 {
+    font-size: 18px; /* Smaller header font size */
+  }
+
+  .settings-option {
+    font-size: 16px; /* Smaller option font size */
+  }
 }

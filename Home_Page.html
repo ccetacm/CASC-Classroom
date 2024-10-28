@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CASC Home Page</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      // Function to toggle the settings panel
+      function toggleSettings() {
+        const panel = document.getElementById("settingsPanel");
+        const overlay = document.getElementById("overlay");
+        panel.classList.toggle("active");
+        overlay.classList.toggle("active");
+      }
+    </script>
   </head>
   <body>
     <!-- Sidebar Menu -->
@@ -35,8 +44,27 @@
         <li class="menu-item">
           <span class="icon">&#128229;</span> Archived classes
         </li>
-        <li class="menu-item"><span class="icon">&#9881;</span> Settings</li>
+        <li class="menu-item" onclick="toggleSettings()">
+          <span class="icon">&#9881;</span> Settings
+        </li>
       </ul>
     </nav>
+
+    <!-- Overlay for the settings panel -->
+    <div id="overlay" class="overlay" onclick="toggleSettings()"></div>
+
+    <!-- Settings Panel -->
+    <div id="settingsPanel" class="settings-panel">
+      <h2>Settings</h2>
+      <div class="settings-option">Change Name</div>
+      <div class="settings-option">Change DP</div>
+      <div class="settings-option">About</div>
+      <div class="about-content">
+        <p>
+          This is the about section where you can provide details about the
+          application.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
