@@ -133,13 +133,13 @@
   font-family: "Georgia", serif; /* Change font for About section */
 }
 
-/* Change Name content */
+/* Change Name and Change DP content */
 .change-content {
   display: none; /* Initially hidden */
   margin-top: 10px;
   font-size: 16px;
   color: #333;
-  font-family: "Verdana", sans-serif; /* Change font for Change Name section */
+  font-family: "Verdana", sans-serif; /* Change font for Change Name and Change DP sections */
   background-color: #f9f9f9;
   padding: 10px;
   border-radius: 5px;

@@ -21,6 +21,7 @@
           aboutContent.style.display === "block" ? "none" : "block";
         // Hide other content sections
         document.getElementById("changeNameContent").style.display = "none";
+        document.getElementById("changeDPContent").style.display = "none";
       }
 
       // Function to toggle the Change Name content
@@ -30,6 +31,17 @@
           changeNameContent.style.display === "block" ? "none" : "block";
         // Hide other content sections
         document.getElementById("aboutContent").style.display = "none";
+        document.getElementById("changeDPContent").style.display = "none";
+      }
+
+      // Function to toggle the Change DP content
+      function toggleChangeDP() {
+        const changeDPContent = document.getElementById("changeDPContent");
+        changeDPContent.style.display =
+          changeDPContent.style.display === "block" ? "none" : "block";
+        // Hide other content sections
+        document.getElementById("aboutContent").style.display = "none";
+        document.getElementById("changeNameContent").style.display = "none";
       }
     </script>
   </head>
@@ -81,8 +93,11 @@
         <p>Enter your new name:</p>
         <input type="text" placeholder="New Name" />
       </div>
-      <div class="settings-option">Change DP</div>
-      <!-- Keep this text without functionality -->
+      <div class="settings-option" onclick="toggleChangeDP()">Change DP</div>
+      <div id="changeDPContent" class="change-content">
+        <p>Upload a new display picture:</p>
+        <input type="file" />
+      </div>
       <div class="settings-option" onclick="toggleAbout()">About</div>
       <div id="aboutContent" class="about-content">
         <p>
